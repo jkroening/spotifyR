@@ -18,7 +18,7 @@ The \href{https://developer.spotify.com/documentation/web-api/#spotify-uris-and-
 If \code{TRUE} the playlist will be included in the user's public playlists,
 if \code{FALSE} it will remain private. o be able to follow playlists privately, the user must have granted the \code{playlist-modify-private} \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/#list-of-scopes}{scope}.}
 
-\item{authorization}{Required. A valid access token from the Spotify Accounts service. See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization Guide} for more details. Defaults to \code{spotifyr::get_spotify_authorization_code()}. The access token must have been issued on behalf of the current user. \cr
+\item{authorization}{Required. A valid access token from the Spotify Accounts service. See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization Guide} for more details. Defaults to \code{spotifyR::get_spotify_authorization_code()}. The access token must have been issued on behalf of the current user. \cr
 Following a publicly followed playlist for a user requires authorization of the
 \code{playlist-modify-public} scope; following a privately followed playlist requires the
 \code{playlist-modify-private} scope. See

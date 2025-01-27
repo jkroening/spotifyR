@@ -24,7 +24,7 @@ create_playlist(
 
 \item{description}{Optional. String containing the playlist description as displayed in Spotify Clients and in the Web API.}
 
-\item{authorization}{Required. A valid access token from the Spotify Accounts service. See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization Guide} for more details. Defaults to \code{spotifyr::get_spotify_authorization_code()}. The access token must have been issued on behalf of the current user. \cr
+\item{authorization}{Required. A valid access token from the Spotify Accounts service. See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization Guide} for more details. Defaults to \code{spotifyR::get_spotify_authorization_code()}. The access token must have been issued on behalf of the current user. \cr
 Creating a public playlist for a user requires authorization of the \code{playlist-modify-public} scope; creating a private playlist requires the \code{playlist-modify-private} scope. See \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/#list-of-scopes}{Using Scopes}.}
 }
 \value{

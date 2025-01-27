@@ -163,7 +163,7 @@ the \href{https://developer.spotify.com/documentation/general/guides/track-relin
 
 \item{target_valence}{Optional. Numeric value between 0 and 1 indicating a target value for recommended tracks' valence. Tracks with the attribute values nearest to the target values will be preferred. For example, you might request \code{target_energy = 0.6} and \code{target_danceability = 0.8}. All target values will be weighed equally in ranking results.}
 
-\item{authorization}{Required. A valid access token from the Spotify Accounts service. See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization guide} for more details. Defaults to \code{spotifyr::get_spotify_access_token()}}
+\item{authorization}{Required. A valid access token from the Spotify Accounts service. See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization guide} for more details. Defaults to \code{spotifyR::get_spotify_access_token()}}
 
 \item{include_seeds_in_response}{Optional. Boolean for whether to include seed object in response. Defaults to \code{FALSE}.}
 }

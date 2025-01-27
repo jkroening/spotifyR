@@ -34,7 +34,7 @@ as it becomes available), \code{medium_term} (approximately last 6 months),
 \code{short_term} (approximately last 4 weeks). Default: \code{medium_term}.}
 
 \item{authorization}{Required. A valid access token from the Spotify Accounts service.
-See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization Guide} for more details. Defaults to \code{spotifyr::get_spotify_access_token()}}
+See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization Guide} for more details. Defaults to \code{spotifyR::get_spotify_access_token()}}
 
 \item{include_meta_info}{Optional. Boolean indicating whether to include full result,
 with meta information such as \code{"total"}, and \code{"limit"}.

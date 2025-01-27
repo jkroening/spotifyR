@@ -17,7 +17,7 @@ follow_artists_or_users(
 \href{https://developer.spotify.com/documentation/web-api/#spotify-uris-and-ids}{Spotify IDs}. For example: \code{ids = c("74ASZWbe4lXaubB36ztrGX", "08td7MxkoHQkXnWAYD8d6Q")}. A maximum of 50 IDs can be sent in one request.}
 
 \item{authorization}{Required. A valid access token from the Spotify Accounts service.
-See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization Guide} for more details. Defaults to \code{spotifyr::get_spotify_authorization_code()}. The access token must have been issued on behalf of the current user. Modifying the list of artists or users the current user follows requires authorization of the \code{user-follow-modify} scope. See \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/#list-of-scopes}{Using Scopes}.}
+See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization Guide} for more details. Defaults to \code{spotifyR::get_spotify_authorization_code()}. The access token must have been issued on behalf of the current user. Modifying the list of artists or users the current user follows requires authorization of the \code{user-follow-modify} scope. See \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/#list-of-scopes}{Using Scopes}.}
 }
 \value{
 The response from the Spotify Web API on the \code{PUT} request, with a meaningful

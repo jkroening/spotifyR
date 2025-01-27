@@ -18,7 +18,7 @@
 #' An ISO 3166-1 alpha-2 country code or the string \code{"from_token"}.
 #' Provide this parameter if you want to apply \href{https://developer.spotify.com/documentation/general/guides/track-relinking-guide/}{Track Relinking}
 #' @param authorization Required. A valid access token from the Spotify Accounts service.
-#' See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization guide} for more details. Both Public and Private playlists belonging to any user are retrievable on provision of a valid access token. Defaults to \code{spotifyr::get_spotify_access_token()}
+#' See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization guide} for more details. Both Public and Private playlists belonging to any user are retrievable on provision of a valid access token. Defaults to \code{spotifyR::get_spotify_access_token()}
 #' @return
 #' Returns a list containing the data about the playlist.
 #' See \url{https://developer.spotify.com/console/get-playlist/} for more information.
@@ -88,7 +88,7 @@ get_playlist <- function(playlist_id,
 #' Provide this parameter if you want to apply
 #' \href{https://developer.spotify.com/documentation/general/guides/track-relinking-guide/}{Track Relinking}
 #' @param authorization Required. A valid access token from the Spotify Accounts service.
-#' See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization guide} for more details. Both Public and Private playlists belonging to any user are retrievable on provision of a valid access token. Defaults to \code{spotifyr::get_spotify_access_token()}
+#' See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization guide} for more details. Both Public and Private playlists belonging to any user are retrievable on provision of a valid access token. Defaults to \code{spotifyR::get_spotify_access_token()}
 #' @param include_meta_info Optional. Boolean indicating whether to include full result,
 #' with meta information such as \code{"total"}, and \code{"limit"}.
 #' Defaults to \code{FALSE}.
@@ -140,7 +140,7 @@ get_playlist_tracks <- function(playlist_id,
 #' Default: 0 (the first object). Maximum offset: 100,000. Use with \code{limit}
 #' to get the next set of playlists.
 #' @param authorization Required. A valid access token from the Spotify Accounts service.
-#' See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization Guide} for more details. Defaults to \code{spotifyr::get_spotify_authorization_code()}. The access token must have been issued on behalf of the current user. \cr
+#' See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization Guide} for more details. Defaults to \code{spotifyR::get_spotify_authorization_code()}. The access token must have been issued on behalf of the current user. \cr
 #' Private playlists are only retrievable for the current user and requires the
 #' \code{playlist-read-private} \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/#list-of-scopes}{scope} to have been authorized by the user. Note that this scope alone will not return collaborative playlists, even though they are always private. \cr
 #' Collaborative playlists are only retrievable for the current user and requires the
@@ -191,7 +191,7 @@ get_my_playlists <- function(limit = 20,
 #' Default: 0 (the first object). Maximum offset: 100,000. Use with \code{limit}
 #' to get the next set of playlists.
 #' @param authorization Required. A valid access token from the Spotify Accounts service.
-#' See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization Guide} for more details. Defaults to \code{spotifyr::get_spotify_authorization_code()}. The access token must have been issued on behalf of the current user. \cr
+#' See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization Guide} for more details. Defaults to \code{spotifyR::get_spotify_authorization_code()}. The access token must have been issued on behalf of the current user. \cr
 #' Private playlists are only retrievable for the current user and requires the
 #' \code{playlist-read-private} \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/#list-of-scopes}{scope} to have been authorized by the user. Note that this scope alone will not return collaborative playlists, even though they are always private. \cr
 #' Collaborative playlists are only retrievable for the current user and requires the
@@ -241,7 +241,7 @@ get_user_playlists <- function(user_id,
 #'
 #' @param playlist_id Required. The \href{https://developer.spotify.com/documentation/web-api/#spotify-uris-and-ids}{Spotify ID} for the playlist.
 #' @param authorization Required. A valid access token from the Spotify Accounts service.
-#' See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization Guide} for more details. Defaults to \code{spotifyr::get_spotify_authorization_code()}. The access token must have been issued on behalf of the current user. \cr
+#' See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization Guide} for more details. Defaults to \code{spotifyR::get_spotify_authorization_code()}. The access token must have been issued on behalf of the current user. \cr
 #' Current playlist image for both Public and Private playlists of any user are retrievable on
 #' provision of a valid access token.
 #' @return
@@ -272,7 +272,7 @@ get_playlist_cover_image <- function(playlist_id,
 #' @param public Optional. Boolean. Defaults to \code{TRUE}. If \code{TRUE} the playlist will be public. If \code{FALSE} it will be private. To be able to create private playlists, the user must have granted the \code{playlist-modify-private} \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/#list-of-scopes}{scope}
 #' @param collaborative Optional. Boolean. Defaults to \code{FALSE}. If \code{TRUE} the playlist will be collaborative. Note that to create a collaborative playlist you must also set \code{public} to \code{FALES}. To create collaborative playlists you must have granted \code{playlist-modify-private} and \code{playlist-modify-public} \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/#list-of-scopes}{scopes}.
 #' @param description Optional. String containing the playlist description as displayed in Spotify Clients and in the Web API.
-#' @param authorization Required. A valid access token from the Spotify Accounts service. See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization Guide} for more details. Defaults to \code{spotifyr::get_spotify_authorization_code()}. The access token must have been issued on behalf of the current user. \cr
+#' @param authorization Required. A valid access token from the Spotify Accounts service. See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization Guide} for more details. Defaults to \code{spotifyR::get_spotify_authorization_code()}. The access token must have been issued on behalf of the current user. \cr
 #' Creating a public playlist for a user requires authorization of the \code{playlist-modify-public} scope; creating a private playlist requires the \code{playlist-modify-private} scope. See \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/#list-of-scopes}{Using Scopes}.
 #' @return The response from the Spotify Web API on the \code{POST} request, with a meaningful
 #' error message if the operation was not successful.
@@ -332,7 +332,7 @@ create_playlist <- function(user_id,
 #'  \code{position = 2}. If omitted, the tracks will be appended to the playlist.
 #'  Tracks are added in the order they are listed in the query string or request body.
 #' @param authorization Required. A valid access token from the Spotify Accounts service.
-#' See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization Guide} for more details. Defaults to \code{spotifyr::get_spotify_authorization_code()}.
+#' See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization Guide} for more details. Defaults to \code{spotifyR::get_spotify_authorization_code()}.
 #' The access token must have been issued on behalf of the current user. \cr
 #' Adding tracks to the current user’s public playlists requires authorization of the
 #' \code{playlist-modify-public} scope; adding tracks to the current user’s private
@@ -380,7 +380,7 @@ add_tracks_to_playlist <- function(playlist_id,
 #' \code{uris = "spotify:track:4iV5W9uYEdYUVa79Axb7Rh", "spotify:track:1301WleyT98MSxVHPZCA6M"} \cr
 #' A maximum of 100 tracks can be removed in one request.
 #' @param authorization Required. A valid access token from the Spotify Accounts service.
-#' See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization Guide} for more details. Defaults to \code{spotifyr::get_spotify_authorization_code()}. The access token must have been issued on behalf of the current user. \cr
+#' See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization Guide} for more details. Defaults to \code{spotifyR::get_spotify_authorization_code()}. The access token must have been issued on behalf of the current user. \cr
 #' Removing tracks to the current user’s public playlists requires authorization of the
 #' \code{playlist-modify-public} scope; removing tracks from the current user’s private
 #' playlist (including collaborative playlists) requires the \code{playlist-modify-private}
@@ -422,7 +422,7 @@ remove_tracks_from_playlist <- function(playlist_id,
 #' @param public Optional. Boolean. If \code{TRUE} the playlist will be public. If \code{FALSE} it will be private.
 #' @param collaborative Optional. Boolean. If \code{TRUE} the playlist will become collaborative and other users will be able to modify the playlist in their Spotify client.Note: you can only set \code{collaborative} to \code{TRUE} on non-public playlists.
 #' @param description Optional. String containing the playlist description as displayed in Spotify Clients and in the Web API.
-#' @param authorization Required. A valid access token from the Spotify Accounts service. See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization Guide} for more details. Defaults to \code{spotifyr::get_spotify_authorization_code()}. The access token must have been issued on behalf of the current user. \cr
+#' @param authorization Required. A valid access token from the Spotify Accounts service. See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization Guide} for more details. Defaults to \code{spotifyR::get_spotify_authorization_code()}. The access token must have been issued on behalf of the current user. \cr
 #' Changing a public playlist for a user requires authorization of the \code{playlist-modify-public} scope; changing a private playlist requires the \code{playlist-modify-private} scope. See \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/#list-of-scopes}{Using Scopes}.
 #' @family playlist functions
 #' @return The response from the Spotify Web API on the

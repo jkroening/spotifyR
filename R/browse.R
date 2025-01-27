@@ -5,7 +5,7 @@
 #' \code{TRUE}.
 #' @param authorization Required. A valid access token from the Spotify Accounts service.
 #' See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization Guide} for more details.
-#' Defaults to \code{spotifyr::get_spotify_access_token()}
+#' Defaults to \code{spotifyR::get_spotify_access_token()}
 #' @return
 #' Returns a data frame of results containing album data.
 #' See \url{https://developer.spotify.com/documentation/web-api/reference/browse/get-list-categories/} for more information.
@@ -22,7 +22,7 @@ get_categories <- function(authorization = get_spotify_access_token(),
         access_token = authorization
     )
 
-    res <- RETRY(verb = 'GET', url, query = params, encode = 'json', terminate_on = c(401, 403, 404))
+    res <- RETRY(verb = 'GET', url, query = params, encode = 'json', terminate_on = c(401, 403, 404, 429))
     stop_for_status(res)
 
     res <- fromJSON(content(res, as = 'text', encoding = 'UTF-8'), flatten = TRUE)
@@ -45,7 +45,7 @@ get_categories <- function(authorization = get_spotify_access_token(),
 #' @param locale Optional. The desired language, consisting of an
 #' \href{https://en.wikipedia.org/wiki/ISO_639-1}{ISO 639-1} language code and an
 #' \href{https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2}{ISO 3166-1 alpha-2 country code}, joined by an underscore. For example: \code{es_MX}, meaning "Spanish (Mexico)". Provide this parameter if you want the category strings returned in a particular language. Note that, if \code{locale} is not supplied, or if the specified language is not available, the category strings returned will be in the Spotify default language (American English).
-#' @param authorization Required. A valid access token from the Spotify Accounts service. See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization guide} for more details. Defaults to \code{spotifyr::get_spotify_access_token()}
+#' @param authorization Required. A valid access token from the Spotify Accounts service. See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization guide} for more details. Defaults to \code{spotifyR::get_spotify_access_token()}
 #' @return
 #' Returns a list of results containing category information. See \url{https://developer.spotify.com/documentation/web-api/reference/users-profile/get-current-users-profile/} for more information.
 #' @export
@@ -69,7 +69,7 @@ get_category <- function(category_id,
     res <- RETRY('GET', url,
                  query = params,
                  encode = 'json',
-                 terminate_on = c(401, 403, 404))
+                 terminate_on = c(401, 403, 404, 429))
 
     stop_for_status(res)
 
@@ -95,7 +95,7 @@ get_category <- function(category_id,
 #' Defaults to \code{0}, the first object. Use with \code{limit} to get the next set of items.
 #' @param authorization Required. A valid access token from the Spotify Accounts service.
 #' See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization guide} for more details.
-#' Defaults to \code{spotifyr::get_spotify_access_token()}
+#' Defaults to \code{spotifyR::get_spotify_access_token()}
 #' @param include_meta_info Optional. Boolean indicating whether to include full result, with meta information such as \code{"total"}, and
 #' \code{"limit"}. Defaults to \code{FALSE}.
 #' @importFrom stringr str_glue
@@ -132,7 +132,7 @@ get_category_playlists <- function(category_id = "party",
 
     res <- RETRY('GET', query_url,
                  query = params,
-                 encode = 'json', terminate_on = c(401, 403, 404))
+                 encode = 'json', terminate_on = c(401, 403, 404, 429))
 
     stop_for_status(res)
 
@@ -163,7 +163,7 @@ get_category_playlists <- function(category_id = "party",
 #' particular country. If omitted, the returned items will be relevant to all countries.
 #' @param limit Optional. The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
 #' @param offset Optional. The index of the first item to return. Default: 0 (the first object). Use with \code{limit} to get the next set of items.
-#' @param authorization Required. A valid access token from the Spotify Accounts service. See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization guide} for more details. Defaults to \code{spotifyr::get_spotify_access_token()}
+#' @param authorization Required. A valid access token from the Spotify Accounts service. See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization guide} for more details. Defaults to \code{spotifyR::get_spotify_access_token()}
 #' @param include_meta_info Optional. Boolean indicating whether to include full result, with meta information such as \code{"country"}, \code{"offset"}, and \code{"limit"}. Defaults to \code{FALSE}.
 #' @return
 #' Returns a data frame of results containing new releases. \cr
@@ -196,7 +196,7 @@ get_new_releases <- function(country = NULL,
         access_token = authorization
     )
 
-    res <- RETRY('GET', base_url, query = params, encode = 'json', terminate_on = c(401, 403, 404))
+    res <- RETRY('GET', base_url, query = params, encode = 'json', terminate_on = c(401, 403, 404, 429))
 
     stop_for_status(res)
 
@@ -237,7 +237,7 @@ get_new_releases <- function(country = NULL,
 #' @param offset Optional. The index of the first item to return.
 #' Defaults to \code{0}, i.e., the first object.
 #' Use with \code{limit} to get the next set of items.
-#' @param authorization Required. A valid access token from the Spotify Accounts service. See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization guide} for more details. Defaults to \code{spotifyr::get_spotify_access_token()}
+#' @param authorization Required. A valid access token from the Spotify Accounts service. See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization guide} for more details. Defaults to \code{spotifyR::get_spotify_access_token()}
 #' @param include_meta_info Optional. Boolean indicating whether to include full result, with meta information such as \code{"total"}, and \code{"limit"}. Defaults to \code{FALSE}.
 #' @return
 #' Returns a data frame of results containing featured playlists. \cr
@@ -280,7 +280,7 @@ get_featured_playlists <- function(locale = NULL,
         access_token = authorization
     )
 
-    res <- RETRY('GET', base_url, query = params, encode = 'json', terminate_on = c(401, 403, 404))
+    res <- RETRY('GET', base_url, query = params, encode = 'json', terminate_on = c(401, 403, 404, 429))
 
     stop_for_status(res)
 
@@ -362,7 +362,7 @@ get_featured_playlists <- function(locale = NULL,
 #' \href{https://developer.spotify.com/documentation/web-api/reference/browse/get-recommendations/#available-genre-seeds}{available genre seeds}. Up to 5 seed values may be provided in any combination of \code{seed_artists}, \code{seed_tracks} and \code{seed_genres}.
 #' @param seed_tracks A character vector of
 #' \href{https://developer.spotify.com/documentation/web-api/#spotify-uris-and-ids}{Spotify IDs} for a seed track. Up to 5 seed values may be provided in any combination of \code{seed_artists}, \code{seed_tracks} and \code{seed_genres}.
-#' @param authorization Required. A valid access token from the Spotify Accounts service. See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization guide} for more details. Defaults to \code{spotifyr::get_spotify_access_token()}
+#' @param authorization Required. A valid access token from the Spotify Accounts service. See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization guide} for more details. Defaults to \code{spotifyR::get_spotify_access_token()}
 #' @param include_seeds_in_response Optional. Boolean for whether to include seed object in response. Defaults to \code{FALSE}.
 #' @return
 #' Returns a data frame of results recommendations. See the official
@@ -491,7 +491,7 @@ get_recommendations <- function(limit = 20,
         access_token = authorization
     )
 
-    res <- RETRY('GET', base_url, query = params, encode = 'json', terminate_on = c(401, 403, 404))
+    res <- RETRY('GET', base_url, query = params, encode = 'json', terminate_on = c(401, 403, 404, 429))
     stop_for_status(res)
     res <- fromJSON(content(res, as = 'text', encoding = 'UTF-8'), flatten = TRUE)
     if (!include_seeds_in_response) {

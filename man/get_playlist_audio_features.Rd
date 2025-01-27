@@ -17,7 +17,7 @@ get_playlist_audio_features(
 Can be found within the Spotify App}
 
 \item{authorization}{Required. A valid access token from the Spotify Accounts service.
-See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization Guide} for more details. Defaults to \code{spotifyr::get_spotify_access_token()}}
+See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization Guide} for more details. Defaults to \code{spotifyR::get_spotify_access_token()}}
 }
 \value{
 A data frame with the audio features and popularity variables of playlists.

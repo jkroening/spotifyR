@@ -1,4 +1,4 @@
 library(testthat)
-library(spotifyr)
+library(spotifyR)
 
-test_check("spotifyr")
+test_check("spotifyR")

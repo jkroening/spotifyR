@@ -13,7 +13,7 @@ get_playlist_cover_image(
 \item{playlist_id}{Required. The \href{https://developer.spotify.com/documentation/web-api/#spotify-uris-and-ids}{Spotify ID} for the playlist.}
 
 \item{authorization}{Required. A valid access token from the Spotify Accounts service.
-See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization Guide} for more details. Defaults to \code{spotifyr::get_spotify_authorization_code()}. The access token must have been issued on behalf of the current user. \cr
+See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization Guide} for more details. Defaults to \code{spotifyR::get_spotify_authorization_code()}. The access token must have been issued on behalf of the current user. \cr
 Current playlist image for both Public and Private playlists of any user are retrievable on
 provision of a valid access token.}
 }

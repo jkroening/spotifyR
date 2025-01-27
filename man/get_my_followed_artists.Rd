@@ -16,7 +16,7 @@ get_my_followed_artists(
 
 \item{after}{Optional. The last artist ID retrieved from the previous request.}
 
-\item{authorization}{Required. A valid access token from the Spotify Accounts service. See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization Guide} for more details. Defaults to \code{spotifyr::get_spotify_authorization_code()}. The access token must have been issued on behalf of the current user. Getting details of the artists or users the current user follows requires authorization of the \code{user-follow-read} scope. See \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/#list-of-scopes}{Using Scopes}.}
+\item{authorization}{Required. A valid access token from the Spotify Accounts service. See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization Guide} for more details. Defaults to \code{spotifyR::get_spotify_authorization_code()}. The access token must have been issued on behalf of the current user. Getting details of the artists or users the current user follows requires authorization of the \code{user-follow-read} scope. See \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/#list-of-scopes}{Using Scopes}.}
 
 \item{include_meta_info}{Optional. Boolean indicating whether to include full result,
 with meta information such as \code{"total"}, and \code{"limit"}. Defaults to \code{FALSE}.}

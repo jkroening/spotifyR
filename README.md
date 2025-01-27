@@ -1,15 +1,15 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# spotifyr
+# spotifyR
 
 <!-- badges: start -->
 
-[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/spotifyr?color=brightgreen)](https://cran.r-project.org/package=spotifyr)
-![](http://cranlogs.r-pkg.org/badges/spotifyr?color=brightgreen)
-[![CRAN\_time\_from\_release](https://www.r-pkg.org/badges/ago/spotifyr)](https://cran.r-project.org/package=spotifyr)
+[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/spotifyR?color=brightgreen)](https://cran.r-project.org/package=spotifyR)
+![](http://cranlogs.r-pkg.org/badges/spotifyR?color=brightgreen)
+[![CRAN\_time\_from\_release](https://www.r-pkg.org/badges/ago/spotifyR)](https://cran.r-project.org/package=spotifyR)
 [![metacran
-downloads](https://cranlogs.r-pkg.org/badges/spotifyr)](https://cran.r-project.org/package=spotifyr)
+downloads](https://cranlogs.r-pkg.org/badges/spotifyR)](https://cran.r-project.org/package=spotifyR)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5638489.svg)](https://doi.org/10.5281/zenodo.5638489)
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 
@@ -17,7 +17,7 @@ downloads](https://cranlogs.r-pkg.org/badges/spotifyr)](https://cran.r-project.o
 
 ## Overview
 
-spotifyr is an R wrapper for pulling track audio features and other
+spotifyR is an R wrapper for pulling track audio features and other
 information from Spotify’s Web API in bulk. By automatically batching
 API requests, it allows you to enter an artist’s name and retrieve their
 entire discography in seconds, along with Spotify’s audio features and
@@ -29,13 +29,13 @@ information for a given Spotify User (including yourself!).
 CRAN version 2.2.3 (recommended)
 
 ``` r
-install.packages('spotifyr')
+install.packages('spotifyR')
 ```
 
 Development version
 
 ``` r
-devtools::install_github('charlie86/spotifyr')
+devtools::install_github('charlie86/spotifyR')
 ```
 
 ## Authentication
@@ -70,14 +70,14 @@ work with your application, but a good default option is
 authorization, visit the offical [Spotify Developer
 Guide](https://developer.spotify.com/documentation/general/guides/authorization-guide/).
 
-<img src="man/figures/spotifyr_auth_screenshot.png" width="50%" />
+<img src="man/figures/spotifyR_auth_screenshot.png" width="50%" />
 
 ## Usage
 
 ### What Was the Beatles’ Favorite Key?
 
 ``` r
-library(spotifyr)
+library(spotifyR)
 beatles <- get_artist_audio_features('the beatles')
 ```
 
@@ -207,12 +207,12 @@ ggplot(
 geom_density_ridges() + 
 theme_ridges() +
 labs(title = "Joyplot of Joy Division's joy distributions", 
-     subtitle = "Based on valence pulled from Spotify's Web API with spotifyr")
+     subtitle = "Based on valence pulled from Spotify's Web API with spotifyR")
 ```
 
 <img src="man/figures/README-joyplot-1.png" width="100%" />
 
-## Dope Stuff Other People Have Done with spotifyr
+## Dope Stuff Other People Have Done with spotifyR
 
 The coolest thing about making this package has definitely been seeing
 all the awesome stuff other people have done with it. Here are a few
@@ -243,7 +243,7 @@ Vatsa
 
 ## Code of Conduct
 
-Please note that the spotifyr project is released with a [Contributor
+Please note that the spotifyR project is released with a [Contributor
 Code of
 Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html).
 By contributing to this project, you agree to abide by its terms.

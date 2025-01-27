@@ -1,11 +1,11 @@
-#' \code{spotifyr} package
+#' \code{spotifyR} package
 #'
 #' A Quick and Easy Wrapper for Pulling Track Audio Features from Spotify's Web API in Bulk
 #'
 #' See the README on
-#' \href{https://github.com/charlie86/spotifyr#readme}{GitHub}
+#' \href{https://github.com/charlie86/spotifyR#readme}{GitHub}
 #'
-#' @name spotifyr
+#' @name spotifyR
 #' @importFrom purrr map map_df map2
 #' @importFrom httr RETRY GET accept_json authenticate config content oauth2.0_token oauth_app oauth_endpoint stop_for_status
 #' @importFrom rvest html_session html_node html_nodes html_text html_attr

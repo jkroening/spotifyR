@@ -36,7 +36,7 @@ this parameter.}
 
 \item{authorization}{Required. A valid access token from the Spotify Accounts service. See the
 \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization Guide} for more details.
-Defaults to \code{spotifyr::get_spotify_authorization_code()}. The access token must have been issued on behalf of the current user. \cr
+Defaults to \code{spotifyR::get_spotify_authorization_code()}. The access token must have been issued on behalf of the current user. \cr
 Reading the user’s resume points on episode objects requires the user-read-playback-position scope. See
 \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/#list-of-scopes}{Using Scopes}.}
 

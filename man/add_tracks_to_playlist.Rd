@@ -33,7 +33,7 @@ a zero-based index. For example, to insert the tracks in the first position:
  Tracks are added in the order they are listed in the query string or request body.}
 
 \item{authorization}{Required. A valid access token from the Spotify Accounts service.
-See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization Guide} for more details. Defaults to \code{spotifyr::get_spotify_authorization_code()}.
+See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization Guide} for more details. Defaults to \code{spotifyR::get_spotify_authorization_code()}.
 The access token must have been issued on behalf of the current user. \cr
 Adding tracks to the current user’s public playlists requires authorization of the
 \code{playlist-modify-public} scope; adding tracks to the current user’s private

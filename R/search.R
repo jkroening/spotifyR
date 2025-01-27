@@ -34,7 +34,7 @@
 #' relevant audio content that is hosted externally. \cr
 #' By default external content is filtered out from responses.
 #' @param authorization Required. A valid access token from the Spotify Accounts service.
-#' See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization guide} for more details. Defaults to \code{spotifyr::get_spotify_access_token()}
+#' See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization guide} for more details. Defaults to \code{spotifyR::get_spotify_access_token()}
 #' @param include_meta_info Optional. Boolean indicating whether to include full result, with meta information such as \code{"total"}, and \code{"limit"}. Defaults to \code{FALSE}.
 #' @export
 #' @family search functions
@@ -138,7 +138,7 @@ search_spotify <- function(q,
 #' Use with limit to get the next page of search results.
 #' @param authorization Required.
 #' A valid access token from the Spotify Accounts service.
-#' See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization guide} for more details. Defaults to \code{spotifyr::get_spotify_access_token()}
+#' See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization guide} for more details. Defaults to \code{spotifyR::get_spotify_access_token()}
 #' @export
 #' @family label functions
 #' @return A data frame with the label information of the artists.
@@ -226,7 +226,7 @@ get_label_artists <- function(label = character(),
 #' Use with limit to get the next page of search results.
 #' @param authorization Required. A valid access token from the Spotify Accounts
 #' service. See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization guide} for more details.
-#' Defaults to \code{spotifyr::get_spotify_access_token()}
+#' Defaults to \code{spotifyR::get_spotify_access_token()}
 #' @family musicology functions
 #' @return A data frame of the artists belonging to the genre with data and
 #' metadata about the artists in a tibble.

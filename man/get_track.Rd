@@ -12,7 +12,7 @@ get_track(id, market = NULL, authorization = get_spotify_access_token())
 \item{market}{Optional. \cr
 An ISO 3166-1 alpha-2 country code or the string \code{"from_token"}. Provide this parameter if you want to apply \href{https://developer.spotify.com/documentation/general/guides/track-relinking-guide/}{Track Relinking}}
 
-\item{authorization}{Required. A valid access token from the Spotify Accounts service. See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization guide} for more details. Defaults to \code{spotifyr::get_spotify_access_token()}}
+\item{authorization}{Required. A valid access token from the Spotify Accounts service. See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization guide} for more details. Defaults to \code{spotifyR::get_spotify_access_token()}}
 }
 \value{
 Returns a data frame of results containing track data. See \url{https://developer.spotify.com/documentation/web-api/reference/tracks/get-several-tracks/} for more information.

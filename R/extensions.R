@@ -24,7 +24,7 @@
 #' @param authorization Required. A valid access token from the Spotify Accounts service.
 #' See the
 #' \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization Guide} for more details.
-#' Defaults to \code{spotifyr::get_spotify_access_token()}
+#' Defaults to \code{spotifyR::get_spotify_access_token()}
 #' @return
 #' Returns a data frame of results containing track audio features data. See the
 #' \href{https://developer.spotify.com/documentation/web-api/reference/tracks/get-several-audio-features/}{Spotify Web API documentation} for more information.
@@ -188,7 +188,7 @@ get_artist_audio_features <- function(artist = NULL,
 #' @param username Required. String of Spotify username.
 #' @param authorization Required. A valid access token from the Spotify Accounts service.
 #' See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization Guide} for more details.
-#' Defaults to \code{spotifyr::get_spotify_access_token()}
+#' Defaults to \code{spotifyR::get_spotify_access_token()}
 #' @return
 #' Returns a data frame of results containing track audio features data. See the
 #' \href{https://developer.spotify.com/documentation/web-api/reference/tracks/get-several-audio-features/}{Spotify Web API documentation} for more information.
@@ -272,7 +272,7 @@ get_user_audio_features <- function(username = NULL,
 #' @param playlist_uris Character vector of Spotify playlist uris.
 #' Can be found within the Spotify App
 #' @param authorization Required. A valid access token from the Spotify Accounts service.
-#' See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization Guide} for more details. Defaults to \code{spotifyr::get_spotify_access_token()}
+#' See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization Guide} for more details. Defaults to \code{spotifyR::get_spotify_access_token()}
 #' @keywords track audio features playlists
 #' @export
 #' @family musicology functions

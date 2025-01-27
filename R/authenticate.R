@@ -62,7 +62,7 @@ get_spotify_authorization_code <- function(
     endpoint <- oauth_endpoint(authorize = 'https://accounts.spotify.com/authorize',
                                access = 'https://accounts.spotify.com/api/token')
 
-    app <- oauth_app('spotifyr', client_id, client_secret)
+    app <- oauth_app('spotifyR', client_id, client_secret)
 
     token <- purrr::safely(.f=oauth2.0_token)(
         endpoint = endpoint,

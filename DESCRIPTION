@@ -1,4 +1,4 @@
-Package: spotifyr
+Package: spotifyR
 Title: R Wrapper for the 'Spotify' Web API
 Version: 2.2.5
 Date: 2024-10-22
@@ -74,7 +74,7 @@ Suggests:
     ggridges,
     spelling,
     testthat (>= 3.0.0)
-URL: https://github.com/charlie86/spotifyr
-BugReports: https://github.com/charlie86/spotifyr/issues
+URL: https://github.com/charlie86/spotifyR
+BugReports: https://github.com/charlie86/spotifyR/issues
 Config/testthat/edition: 3
 Language: en-US

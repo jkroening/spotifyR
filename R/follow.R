@@ -6,7 +6,7 @@
 #' @param ids Optional. A character vector of the artist or the user
 #' \href{https://developer.spotify.com/documentation/web-api/#spotify-uris-and-ids}{Spotify IDs}. For example: \code{ids = c("74ASZWbe4lXaubB36ztrGX", "08td7MxkoHQkXnWAYD8d6Q")}. A maximum of 50 IDs can be sent in one request.
 #' @param authorization Required. A valid access token from the Spotify Accounts service.
-#' See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization Guide} for more details. Defaults to \code{spotifyr::get_spotify_authorization_code()}. The access token must have been issued on behalf of the current user. Modifying the list of artists or users the current user follows requires authorization of the \code{user-follow-modify} scope. See \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/#list-of-scopes}{Using Scopes}.
+#' See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization Guide} for more details. Defaults to \code{spotifyR::get_spotify_authorization_code()}. The access token must have been issued on behalf of the current user. Modifying the list of artists or users the current user follows requires authorization of the \code{user-follow-modify} scope. See \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/#list-of-scopes}{Using Scopes}.
 #' @return The response from the Spotify Web API on the \code{PUT} request, with a meaningful
 #' error message if the operation was not successful.
 #' @importFrom assertthat assert_that
@@ -48,7 +48,7 @@ follow_artists_or_users <- function(type,
 #' @param public Optional. Defaults to \code{TRUE}.
 #' If \code{TRUE} the playlist will be included in the user's public playlists,
 #' if \code{FALSE} it will remain private. o be able to follow playlists privately, the user must have granted the \code{playlist-modify-private} \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/#list-of-scopes}{scope}.
-#' @param authorization Required. A valid access token from the Spotify Accounts service. See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization Guide} for more details. Defaults to \code{spotifyr::get_spotify_authorization_code()}. The access token must have been issued on behalf of the current user. \cr
+#' @param authorization Required. A valid access token from the Spotify Accounts service. See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization Guide} for more details. Defaults to \code{spotifyR::get_spotify_authorization_code()}. The access token must have been issued on behalf of the current user. \cr
 #' Following a publicly followed playlist for a user requires authorization of the
 #' \code{playlist-modify-public} scope; following a privately followed playlist requires the
 #' \code{playlist-modify-private} scope. See
@@ -83,7 +83,7 @@ follow_playlist <- function(playlist_id,
 #' Remove Current User from Followers of Playlist.
 #'
 #' @param playlist_id Required. The \href{https://developer.spotify.com/documentation/web-api/#spotify-uris-and-ids}{Spotify ID} of the playlist that is to be no longer followed.
-#' @param authorization Required. A valid access token from the Spotify Accounts service. See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization Guide} for more details. Defaults to \code{spotifyr::get_spotify_authorization_code()}. The access token must have been issued on behalf of the current user. \cr
+#' @param authorization Required. A valid access token from the Spotify Accounts service. See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization Guide} for more details. Defaults to \code{spotifyR::get_spotify_authorization_code()}. The access token must have been issued on behalf of the current user. \cr
 #' Unfollowing a publicly followed playlist for a user requires authorization of the
 #' \code{playlist-modify-public} scope; unfollowing a privately followed playlist requires the
 #' \code{playlist-modify-private} scope. See
@@ -116,7 +116,7 @@ unfollow_playlist <- function(playlist_id,
 #'
 #' @param limit Optional. The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
 #' @param after Optional. The last artist ID retrieved from the previous request.
-#' @param authorization Required. A valid access token from the Spotify Accounts service. See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization Guide} for more details. Defaults to \code{spotifyr::get_spotify_authorization_code()}. The access token must have been issued on behalf of the current user. Getting details of the artists or users the current user follows requires authorization of the \code{user-follow-read} scope. See \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/#list-of-scopes}{Using Scopes}.
+#' @param authorization Required. A valid access token from the Spotify Accounts service. See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization Guide} for more details. Defaults to \code{spotifyR::get_spotify_authorization_code()}. The access token must have been issued on behalf of the current user. Getting details of the artists or users the current user follows requires authorization of the \code{user-follow-read} scope. See \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/#list-of-scopes}{Using Scopes}.
 #' @param include_meta_info Optional. Boolean indicating whether to include full result,
 #' with meta information such as \code{"total"}, and \code{"limit"}. Defaults to \code{FALSE}.
 #' @family artist functions
@@ -160,7 +160,7 @@ get_my_followed_artists <- function(limit = 20,
 #' @param type Required. String of the ID type: either \code{"artist"} or \code{"user"}.
 #' @param ids Required. A character vector of the artist or the user
 #' \href{https://developer.spotify.com/documentation/web-api/#spotify-uris-and-ids}{Spotify IDs} to check. For example: \code{ids = c("74ASZWbe4lXaubB36ztrGX", "08td7MxkoHQkXnWAYD8d6Q")}. A maximum of 50 IDs can be sent in one request.
-#' @param authorization Required. A valid access token from the Spotify Accounts service. See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization Guide} for more details. Defaults to \code{spotifyr::get_spotify_authorization_code()}. The access token must have been issued on behalf of the current user. Getting details of the artists or users the current user follows requires authorization of the \code{user-follow-read} scope. See \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/#list-of-scopes}{Using Scopes}.
+#' @param authorization Required. A valid access token from the Spotify Accounts service. See the \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization Guide} for more details. Defaults to \code{spotifyR::get_spotify_authorization_code()}. The access token must have been issued on behalf of the current user. Getting details of the artists or users the current user follows requires authorization of the \code{user-follow-read} scope. See \href{https://developer.spotify.com/documentation/general/guides/authorization-guide/#list-of-scopes}{Using Scopes}.
 #' @return A data frame containing three columns, \code{"type"}, the \code{"id"} of the
 #' artist or users and \code{"is_following"} as a logical, boolean variable.
 #' @importFrom tibble tibble

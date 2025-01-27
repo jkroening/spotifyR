@@ -26,7 +26,7 @@ be specified.}
 be specified.}
 
 \item{authorization}{Required. A valid access token from the Spotify Accounts service. See the
-\href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization guide} for more details. Defaults to \code{spotifyr::get_spotify_access_token()}. The access token must have been issued on behalf of the current user. \cr}
+\href{https://developer.spotify.com/documentation/general/guides/authorization-guide/}{Web API authorization guide} for more details. Defaults to \code{spotifyR::get_spotify_access_token()}. The access token must have been issued on behalf of the current user. \cr}
 
 \item{include_meta_info}{Optional. Boolean indicating whether to include full result,
 with meta information such as \code{"before"}, \code{"after"}, and \code{"limit"}. Defaults to \code{FALSE}.
